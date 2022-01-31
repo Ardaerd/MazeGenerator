@@ -28,7 +28,8 @@ void Cell :: printInitialMaze() {
             sleep_until(system_clock::now() + 0.002s);
             cout << arr[i][j]->getBox();
         }
-        cout << "|" << endl;
+        if (i != ROW-1)
+            cout << "|" << endl;
     }
 }
 

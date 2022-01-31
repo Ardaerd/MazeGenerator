@@ -11,6 +11,8 @@ void DFS :: DFS_Algorithm(int node) {
     // Create a stack for dfs
     stack<int> stack;
 
+    this->cell->arr[node/V][node%V]->remove_LeftWall();
+
     srand(time(0));
 
     // Push the current source node
