@@ -25,7 +25,7 @@ void Cell :: printInitialMaze() {
     for (int i = 0; i < ROW; i++) {
         for (int j = 0; j < COLUMN; j++) {
             sleep_for(1ns);
-            sleep_until(system_clock::now() + 0.05s);
+            sleep_until(system_clock::now() + 0.0012s);
             cout << arr[i][j]->getBox();
         }
         cout << "|" << endl;

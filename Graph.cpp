@@ -4,8 +4,8 @@
 Graph :: Graph() {
     this->cell = new Cell();
     init();
-    printGraph();
-    cell->printInitialMaze(); // Printing the maze
+    //printGraph();
+    //cell->printInitialMaze(); // Printing the maze
 }
 
 void Graph :: printMaze() {

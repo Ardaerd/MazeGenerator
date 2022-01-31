@@ -3,7 +3,7 @@
 
 #include <string>
 
-#define V 5  // Vertex
+#define V 10  // Vertex
 
 using namespace std;
 
