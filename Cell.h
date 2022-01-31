@@ -2,16 +2,18 @@
 #define MAZE_GENERATOR_CELLS_H
 
 #include <string>
+#include "Node.h"
 
-#define ROW 4
-#define COLUMN 4
+#define ROW V
+#define COLUMN V
 
 using namespace std;
 
 class Cell {
     public:
-       string arr[ROW][COLUMN];
+       Node* arr[ROW][COLUMN];
        Cell();
+       Node* createNode(int data);
        void printInitialMaze();
 };
 

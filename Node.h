@@ -3,13 +3,19 @@
 
 #include <string>
 
+#define V 5  // Vertex
+
 using namespace std;
 
 class Node {
     public:
        int data;
+       string leftWall;
+       string downWall;
+       string getBox();
+       void remove_DownWall();
+       void remove_LeftWall();
        Node(int data);
-       Node* next;
 };
 
 #endif //MAZE_GENERATOR_NODE_H

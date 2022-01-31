@@ -1,10 +1,11 @@
 #include <iostream>
-#include "Graph.h"
+#include "DFS.h"
 
 
 int main() {
-    Graph* graph = new Graph();
-
+    DFS* dfs = new DFS();
+    dfs->DFS_Algorithm(4);
+    dfs->print();
 
     return 0;
 }

@@ -1,18 +1,15 @@
-#include <iostream>
 #include "Graph.h"
 #include "Cell.h"
 
 Graph :: Graph() {
-    Cell* cell = new Cell();
+    this->cell = new Cell();
     init();
     printGraph();
     cell->printInitialMaze(); // Printing the maze
 }
 
-Node* Graph :: createNode(int data) {
-    Node* node = new Node(data);
-
-    return node;
+void Graph :: printMaze() {
+    cell->printInitialMaze();
 }
 
 // Adding undirected edges to the graph
@@ -31,8 +28,8 @@ void Graph :: init() {
             if (j < V-1)
                 addEdge(count,count+1);
 
-            if (count < (V*V-4))
-                addEdge(count,count+4);
+            if (count < (V*V-V))
+                addEdge(count,count+V);
             count++;
         }
     }

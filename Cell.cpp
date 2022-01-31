@@ -1,10 +1,17 @@
 #include <iostream>
 #include "Cell.h"
+#include <chrono>
+#include <thread>
+
+using namespace std::this_thread;     // sleep_for, sleep_until
+using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
+using std::chrono::system_clock;
 
 Cell :: Cell() {
     for (int i = 0; i < ROW; i++) {
         for (int j = 0; j < COLUMN; j++) {
-            arr[i][j] = "|__";
+            int data = j*V + i;
+            arr[i][j] = createNode(data);
         }
     }
 }
@@ -17,9 +24,17 @@ void Cell :: printInitialMaze() {
 
     for (int i = 0; i < ROW; i++) {
         for (int j = 0; j < COLUMN; j++) {
-            cout << arr[i][j];
+            sleep_for(1ns);
+            sleep_until(system_clock::now() + 0.05s);
+            cout << arr[i][j]->getBox();
         }
         cout << "|" << endl;
     }
+}
+
+Node* Cell :: createNode(int data) {
+    Node* node = new Node(data);
+
+    return node;
 }
 

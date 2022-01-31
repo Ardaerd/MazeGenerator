@@ -2,10 +2,8 @@
 #define MAZE_GENERATOR_GRAPH_H
 
 #include <vector>
-#include "Node.h"
 #include "Cell.h"
-
-#define V 4  // Vertex
+#include <iostream>
 
 class Graph {
     public:
@@ -15,6 +13,8 @@ class Graph {
        void printGraph();
        Node* createNode(int data);
        Graph();
+       void printMaze();
+       Cell* cell;
 };
 
 #endif //MAZE_GENERATOR_GRAPH_H
